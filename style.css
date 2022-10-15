@@ -120,6 +120,39 @@ body{
     color: var(--main-color);
 }
 
+.navbar .icons .search-form {
+    position: absolute;
+    top:110%; right: -110%;
+    width: 70vw;
+    height: 5rem;
+    background: #fff;
+    border-radius: .5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .icons .searchFormActive {
+    right: 10px;
+    transition: .4s ease;
+}
+
+.icons .search-form input {
+    height: 100%;
+    width:100%;
+    background: none;
+    text-transform: none;
+    font-size: 18px;
+    color: var(--black);
+    padding: 0 10px;
+}
+
+.icons .search-form label {
+    font-size: 20px;
+    padding-right: 15px;
+    color: var(--black);
+}
+
 .navbar .icons .menuicon {
     display: none;
     width: 40px;
@@ -403,6 +436,12 @@ body{
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 16px;
+}
+
+.card p span {
+    font-size: smaller;
+    font-weight: lighter;
+    text-decoration: line-through;
 }
 
 .card button {

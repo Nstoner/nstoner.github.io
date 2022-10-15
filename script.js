@@ -11,14 +11,14 @@ menuIcon.addEventListener("click", () => {
         line2Tag.classList.remove("hideline2");
         line3Tag.classList.remove("rotateline3");
         sideBar.classList.remove("active");
-
+        searchForm.classList.remove("searchFormActive");
         window.onscroll = () => {
             line1Tag.classList.remove("rotateline1");
             line2Tag.classList.remove("hideline2");
             line3Tag.classList.remove("rotateline3");
             sideBar.classList.remove("active");
             menuIcon.classList.remove("isOpen");
-
+            
         }
     }else {
         line1Tag.classList.add("rotateline1");
@@ -26,5 +26,20 @@ menuIcon.addEventListener("click", () => {
         line3Tag.classList.add("rotateline3");
         sideBar.classList.add("active")
         menuIcon.classList.add("isOpen");
+        searchForm.classList.remove("searchFormActive");
     }
 })
+
+
+const searchIcon = document.getElementById("search-btn");
+const searchForm = document.querySelector(".search-form");
+
+searchIcon.addEventListener("click", () => {
+    searchForm.classList.toggle("searchFormActive");
+    sideBar.classList.remove("active");
+    menuIcon.classList.remove("isOpen");
+    line1Tag.classList.remove("rotateline1");
+    line2Tag.classList.remove("hideline2");
+    line3Tag.classList.remove("rotateline3");
+});
+
