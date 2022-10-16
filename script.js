@@ -64,7 +64,33 @@ cartBtn.addEventListener("click", () => {
 //Slider
 
 
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".product-slider", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
+  });
+
+
+  //Review Slider
+
+  var swiper = new Swiper(".review-slider", {
     slidesPerView: 1,
     spaceBetween: 10,
     pagination: {
